@@ -46,3 +46,6 @@ names(managers_data)[12] <- "Mean Value"
 names(managers_data)[11] <- "Answer Total"
 
 managers_data <- subset(managers_data, select = -mean_value)
+
+column_summary <- colSums(managers_data[,c(4:9,11:12)], na.rm=TRUE)
+column_summary
